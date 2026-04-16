@@ -4,9 +4,9 @@
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color-scheme: light;
-  color: #000000;
-  background-color: #ffffff;
+  color-scheme: dark;
+  color: #ffffff;
+  background-color: #000;
 }
 
 body {
@@ -15,8 +15,9 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #ffffff;
-  background-image: radial-gradient(circle at 100% 0%, rgba(67, 24, 255, 0.03) 0%, transparent 40%);
+  /* Restore the vibrant "Bright" color scheme (Magenta/Pink) */
+  background: radial-gradient(circle at center, #3a1a3a 0%, #050505 100%);
+  overflow: hidden;
 }
 
 #root {
@@ -30,21 +31,23 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 3rem;
+  padding: 4rem 2.5rem;
   width: 90%;
-  max-width: 540px;
+  max-width: 520px;
   margin: 0 auto;
-  background: #fafafa;
-  border: 1px solid #eeeeee;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 35px; /* Compulsory Requirement */
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
 .subtext {
-  font-size: 0.75rem;
-  color: #999999;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
-  letter-spacing: 0.35em;
+  letter-spacing: 0.4em;
   margin-bottom: 2rem;
   font-weight: 600;
 }
@@ -52,64 +55,62 @@ body {
 .domain-info h1 {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #000000;
+  color: #fff;
   margin-bottom: 1rem;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
 }
 
 .domain-info p {
-  font-size: 1.05rem;
-  color: #555555;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 3rem;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-/* Highlighted New Infrastructure */
+/* Highlighted with Bright Color */
 .highlight-domain {
-  display: inline-block;
-  color: #3f51b5; /* Professional Indigo */
+  color: #ff00d2;
   font-weight: 600;
-  padding: 0.2rem 0.6rem;
-  background: rgba(63, 81, 181, 0.06);
-  border-radius: 8px;
 }
 
 .domain-info strong {
-  color: #000000;
+  color: #fff;
   font-weight: 600;
 }
 
+/* Bright Magenta/Pink Button */
 .redirect-btn {
   font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
   text-decoration: none;
-  padding: 1.2rem 3rem;
+  padding: 1.25rem 3.5rem;
   border-radius: 35px; /* Compulsory Requirement */
-  background: #000000;
-  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  background: linear-gradient(135deg, #ff00d2 0%, #d53a7b 100%);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: inline-block;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(255, 0, 210, 0.2);
+  border: none;
 }
 
 .redirect-btn:hover {
-  transform: translateY(-4px);
-  background: #222222;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(255, 0, 210, 0.4);
+  filter: brightness(1.1);
 }
 
 .footer-note {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   font-size: 0.8rem;
-  color: #bbbbbb;
-  font-weight: 400;
+  color: rgba(255, 255, 255, 0.25);
+  font-weight: 300;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
   .redirect-card {
-    padding: 3.5rem 1.5rem;
-    width: 85%;
+    padding: 3rem 1.5rem;
+    width: 88%;
   }
 
   .domain-info h1 {
@@ -117,11 +118,11 @@ body {
   }
 
   .domain-info p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .redirect-btn {
-    padding: 1rem 2.5rem;
-    width: 80%;
+    padding: 1.1rem 2.8rem;
+    width: 85%;
   }
 }
