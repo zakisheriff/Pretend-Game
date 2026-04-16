@@ -16,10 +16,6 @@
 ![Zustand](https://img.shields.io/badge/Zustand-443E38?style=for-the-badge&logo=react&logoColor=white)
 
 <br />
-
-<img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/4c7f12147253507.62c08a9a8c1f9.png" width="180" height="180" style="border-radius: 40px" />
-
-<br />
 <br />
 
 **One Phone. Many Secrets. Endless Fun.**
@@ -113,65 +109,6 @@ A cooperative game of telepathy and empathy for 2+ players:
 | **Extensive Themes** | 13+ curated categories including Movies, Food, Sports, and more. |
 | **Haptic Immersion** | Tactile feedback for every interaction, from reveals to votes. |
 | **Device Motion** | Charades mode uses phone tilt for hands-free correct/pass actions. |
-
----
-
-## 🛠️ Technical Stack
-
-- **React Native & Expo** - Cross-platform core with native speed
-- **Zustand State** - Lightweight and predictable game logic management
-- **Reanimated** - Fluid 60fps transitions and interactive reveal animations
-- **Expo Sensors** - Device motion for Charades tilt detection
-- **Dynamic Themes** - Scalable JSON-based word pairing system
-
----
-
-## 📂 Project Structure
-
-```bash
-Pretend/
-├── app/                    # Expo Router Screens
-│   ├── index.tsx           # Home Screen
-│   ├── select-mode.tsx     # Mode Selection (2+, 3+, 4+ player sections)
-│   ├── add-players.tsx     # Player Management
-│   ├── role-reveal.tsx     # Secret Role Distribution
-│   ├── discussion.tsx      # Timer & Discussion Phase
-│   ├── police-arrest.tsx   # Thief & Police Voting
-│   ├── results.tsx         # Scoring & Results
-│   └── charades/           # Charades Mode Screens
-├── store/
-│   └── gameStore.ts        # Game State & Logic
-├── data/
-│   ├── themes/             # Classic Mode Word Lists
-│   ├── undercover/         # Paired Word Data
-│   └── charades.ts         # Charades Words
-├── components/             # Reusable UI Components
-├── types/
-│   └── game.ts             # TypeScript Definitions
-└── assets/                 # Brand Assets
-```
-
----
-
-## 🚀 Infrastructure Showcase
-
-### Redirect Management
-
-```bash
-# Clone the redirect repository
-git clone https://github.com/zakisheriff/Pretend-Redirect.git
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm run dev
-```
-
-### How to Visit
-
-1. **Visit Domain** - Head over to [pretend.theatom.lk](https://pretend.theatom.lk)
-2. **Access App** - The site acts as a gateway to the primary game services.
 
 ---
 
