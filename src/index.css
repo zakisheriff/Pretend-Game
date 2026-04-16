@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0c0c0e;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #2d1a2e 0%, #0c0c0e 100%);
+}
+
+#root {
+  width: 100%;
+  text-align: center;
+}
+
+.redirect-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.redirect-link {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.redirect-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff00d2 0%, #d53a7b 100%);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.redirect-link:hover {
+  transform: translateY(-5px) scale(1.05);
+  color: #d53a7b;
+}
+
+.redirect-link:hover::after {
+  width: 60%;
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: -0.5rem;
+}
