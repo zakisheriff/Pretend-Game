@@ -38,36 +38,29 @@ body {
 }
 
 .redirect-link {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: #fff;
   text-decoration: none;
-  padding: 1rem 2rem;
-  border-radius: 12px;
+  padding: 1.2rem 2.8rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ff00d2 0%, #d53a7b 100%);
+  box-shadow: 0 10px 20px rgba(255, 0, 210, 0.2);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  letter-spacing: -0.02em;
-  position: relative;
-}
-
-.redirect-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #ff00d2 0%, #d53a7b 100%);
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+  letter-spacing: -0.01em;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .redirect-link:hover {
-  transform: translateY(-5px) scale(1.05);
-  color: #d53a7b;
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(255, 0, 210, 0.4);
+  background: linear-gradient(135deg, #ff33db 0%, #eb4a8d 100%);
+  filter: brightness(1.1);
 }
 
-.redirect-link:hover::after {
-  width: 60%;
+.redirect-link:active {
+  transform: translateY(-2px);
 }
 
 .subtext {

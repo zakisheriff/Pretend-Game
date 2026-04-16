@@ -4,13 +4,17 @@ function App() {
   return (
     <div className="redirect-container">
       <span className="subtext">Notice: Domain Change</span>
-      <p style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '1rem' }}>
+      <p style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '2rem', fontSize: '1.1rem' }}>
         The domain <strong>pretend.theoneatom.com</strong> has moved.
       </p>
+      
       <a href="https://pretend.theatom.lk" className="redirect-link">
-        pretend.theatom.lk
+        Go to pretend.theatom.lk
       </a>
-      <span className="subtext" style={{ marginTop: '2rem' }}>Please update your bookmarks</span>
+
+      <span className="subtext" style={{ marginTop: '2.5rem', opacity: 0.5 }}>
+        Click the button above to visit our new home
+      </span>
     </div>
   )
 }
