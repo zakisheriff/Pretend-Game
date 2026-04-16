@@ -4,9 +4,9 @@
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color-scheme: dark;
-  color: #f1f1f1;
-  background-color: #030303;
+  color-scheme: light;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 body {
@@ -15,11 +15,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #030303;
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(255, 67, 100, 0.05) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(100, 24, 255, 0.05) 0px, transparent 50%);
-  overflow: hidden;
+  background-color: #ffffff;
+  background-image: radial-gradient(circle at 100% 0%, rgba(67, 24, 255, 0.03) 0%, transparent 40%);
 }
 
 #root {
@@ -33,69 +30,98 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3.5rem 2rem;
-  max-width: 500px;
+  padding: 4rem 3rem;
+  width: 90%;
+  max-width: 540px;
   margin: 0 auto;
-  background: rgba(15, 15, 18, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 35px; /* Compulsory requirement */
-  backdrop-filter: blur(20px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 35px; /* Compulsory Requirement */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
 }
 
 .subtext {
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75rem;
+  color: #999999;
   text-transform: uppercase;
-  letter-spacing: 0.4em;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
+  letter-spacing: 0.35em;
+  margin-bottom: 2rem;
+  font-weight: 600;
 }
 
 .domain-info h1 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.02em;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
 }
 
 .domain-info p {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 2.5rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  color: #555555;
+  margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+/* Highlighted New Infrastructure */
+.highlight-domain {
+  display: inline-block;
+  color: #3f51b5; /* Professional Indigo */
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  background: rgba(63, 81, 181, 0.06);
+  border-radius: 8px;
 }
 
 .domain-info strong {
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 500;
+  color: #000000;
+  font-weight: 600;
 }
 
-/* Button with 35px Border Radius if possible, or consistent with card */
 .redirect-btn {
   font-size: 1rem;
-  font-weight: 500;
-  color: #fff;
+  font-weight: 600;
+  color: #ffffff;
   text-decoration: none;
-  padding: 1.1rem 2.8rem;
-  border-radius: 35px; /* Compulsory requirement */
-  background: #fff;
-  color: #000;
-  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  padding: 1.2rem 3rem;
+  border-radius: 35px; /* Compulsory Requirement */
+  background: #000000;
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
   display: inline-block;
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .redirect-btn:hover {
-  transform: translateY(-4px) scale(1.02);
-  background: #e0e0e0;
-  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+  background: #222222;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .footer-note {
-  margin-top: 2.5rem;
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.2);
-  font-weight: 300;
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  color: #bbbbbb;
+  font-weight: 400;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .redirect-card {
+    padding: 3.5rem 1.5rem;
+    width: 85%;
+  }
+
+  .domain-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .domain-info p {
+    font-size: 1rem;
+  }
+
+  .redirect-btn {
+    padding: 1rem 2.5rem;
+    width: 80%;
+  }
 }
