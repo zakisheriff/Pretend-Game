@@ -15,8 +15,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  /* Restore the vibrant "Bright" color scheme (Magenta/Pink) */
-  background: radial-gradient(circle at center, #3a1a3a 0%, #050505 100%);
+  /* Radiant background (vibrant magenta for Pretend) */
+  background: radial-gradient(circle at center, #331133 0%, #050505 100%);
   overflow: hidden;
 }
 
@@ -25,104 +25,82 @@ body {
   text-align: center;
 }
 
-/* 35px Border Radius Compulsory */
-.redirect-card {
+.redirect-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 2.5rem;
-  width: 90%;
-  max-width: 520px;
+  padding: 2rem;
+  width: 100%;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 35px; /* Compulsory Requirement */
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
 .subtext {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
   letter-spacing: 0.4em;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
 }
 
-.domain-info h1 {
-  font-size: 2.2rem;
+.new-domain {
+  font-size: 3rem;
   font-weight: 700;
-  color: #fff;
-  margin-bottom: 1rem;
-  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.04em;
 }
 
-.domain-info p {
-  font-size: 1rem;
+.description {
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 3rem;
-  line-height: 1.6;
+  max-width: 400px;
 }
 
-/* Highlighted with Bright Color */
-.highlight-domain {
-  color: #ff00d2;
-  font-weight: 600;
-}
-
-.domain-info strong {
-  color: #fff;
-  font-weight: 600;
-}
-
-/* Bright Magenta/Pink Button */
+/* 35px Border Radius Compulsory - Compact Button */
 .redirect-btn {
   font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
   text-decoration: none;
-  padding: 1.25rem 3.5rem;
+  padding: 1.1rem 2.5rem; /* More compact padding */
   border-radius: 35px; /* Compulsory Requirement */
   background: linear-gradient(135deg, #ff00d2 0%, #d53a7b 100%);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: inline-block;
   box-shadow: 0 10px 25px rgba(255, 0, 210, 0.2);
   border: none;
+  min-width: 180px; /* Base width instead of full width */
 }
 
 .redirect-btn:hover {
-  transform: translateY(-5px) scale(1.02);
+  transform: translateY(-5px) scale(1.05);
   box-shadow: 0 15px 40px rgba(255, 0, 210, 0.4);
   filter: brightness(1.1);
 }
 
-.footer-note {
-  margin-top: 3.5rem;
+.footer-link {
+  margin-top: 4rem;
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.25);
-  font-weight: 300;
+  color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
-  .redirect-card {
-    padding: 3rem 1.5rem;
-    width: 88%;
+  .new-domain {
+    font-size: 2.2rem;
   }
 
-  .domain-info h1 {
-    font-size: 1.8rem;
-  }
-
-  .domain-info p {
+  .description {
     font-size: 0.95rem;
+    padding: 0 1rem;
   }
 
   .redirect-btn {
-    padding: 1.1rem 2.8rem;
-    width: 85%;
+    padding: 1rem 2.2rem;
+    min-width: 160px;
   }
 }
