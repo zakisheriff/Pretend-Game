@@ -13,19 +13,14 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 100%;
-  background-color: #050505;
 }
 
 #root {
-  height: 100%;
+  display: grid;
+  place-items: center;
+  min-height: 100dvh; /* Use dynamic viewport height for mobile */
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  /* Radiant background (vibrant magenta for Pretend) */
   background: radial-gradient(circle at center, #331133 0%, #050505 100%);
 }
 
@@ -33,16 +28,14 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
   width: 100%;
-  margin: 0 auto;
+  max-width: 500px;
 }
 
 .subtext {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.4);
-  text-transform: uppercase;
   letter-spacing: 0.4em;
   margin-bottom: 1.5rem;
   font-weight: 600;
@@ -65,28 +58,20 @@ html, body {
 
 /* 35px Border Radius Compulsory - Compact Button */
 .redirect-btn {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  padding: 1.1rem 2.5rem; /* More compact padding */
+  padding: 0.8rem 2rem;
   border-radius: 35px; /* Compulsory Requirement */
-  background: linear-gradient(135deg, #ff00d2 0%, #d53a7b 100%);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   display: inline-block;
-  box-shadow: 0 10px 25px rgba(255, 0, 210, 0.2);
-  border: none;
-  min-width: 180px; /* Base width instead of full width */
-}
-
-.redirect-btn:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 15px 40px rgba(255, 0, 210, 0.4);
-  filter: brightness(1.1);
+  min-width: 160px;
 }
 
 .footer-link {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.2);
   text-decoration: none;
