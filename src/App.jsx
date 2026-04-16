@@ -2,19 +2,23 @@ import './index.css'
 
 function App() {
   return (
-    <div className="redirect-container">
-      <span className="subtext">Notice: Domain Change</span>
-      <p style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '2rem', fontSize: '1.1rem' }}>
-        The domain <strong>pretend.theoneatom.com</strong> has moved.
-      </p>
+    <div className="redirect-card">
+      <span className="subtext">System Notification</span>
       
-      <a href="https://pretend.theatom.lk" className="redirect-link">
-        Go to pretend.theatom.lk
+      <div className="domain-info">
+        <h1>Domain Moved</h1>
+        <p>
+          The service at <strong>pretend.theoneatom.com</strong> has been permanently moved to our new infrastructure.
+        </p>
+      </div>
+      
+      <a href="https://pretend.theatom.lk" className="redirect-btn">
+        Enter pretend.theatom.lk
       </a>
 
-      <span className="subtext" style={{ marginTop: '2.5rem', opacity: 0.5 }}>
-        Click the button above to visit our new home
-      </span>
+      <div className="footer-note">
+        Redirecting you to the Atom ecosystem
+      </div>
     </div>
   )
 }

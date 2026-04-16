@@ -1,18 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
-
   color-scheme: dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #0c0c0e;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: #f1f1f1;
+  background-color: #030303;
 }
 
 body {
@@ -21,7 +15,11 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background: radial-gradient(circle at center, #2d1a2e 0%, #0c0c0e 100%);
+  background-color: #030303;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(255, 67, 100, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(100, 24, 255, 0.05) 0px, transparent 50%);
+  overflow: hidden;
 }
 
 #root {
@@ -29,44 +27,75 @@ body {
   text-align: center;
 }
 
-.redirect-container {
+/* 35px Border Radius Compulsory */
+.redirect-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  items-center;
   justify-content: center;
-  gap: 1rem;
-}
-
-.redirect-link {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #fff;
-  text-decoration: none;
-  padding: 1.2rem 2.8rem;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #ff00d2 0%, #d53a7b 100%);
-  box-shadow: 0 10px 20px rgba(255, 0, 210, 0.2);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  letter-spacing: -0.01em;
-  display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.redirect-link:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 15px 30px rgba(255, 0, 210, 0.4);
-  background: linear-gradient(135deg, #ff33db 0%, #eb4a8d 100%);
-  filter: brightness(1.1);
-}
-
-.redirect-link:active {
-  transform: translateY(-2px);
+  padding: 3.5rem 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(15, 15, 18, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 35px; /* Compulsory requirement */
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .subtext {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  margin-bottom: -0.5rem;
+  letter-spacing: 0.4em;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.domain-info h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.domain-info p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.domain-info strong {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+/* Button with 35px Border Radius if possible, or consistent with card */
+.redirect-btn {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  padding: 1.1rem 2.8rem;
+  border-radius: 35px; /* Compulsory requirement */
+  background: #fff;
+  color: #000;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: inline-block;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.redirect-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  background: #e0e0e0;
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+}
+
+.footer-note {
+  margin-top: 2.5rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 300;
 }
