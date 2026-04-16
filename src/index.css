@@ -12,9 +12,11 @@
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height for perfect mobile centering */
   /* Radiant background (vibrant magenta for Pretend) */
   background: radial-gradient(circle at center, #331133 0%, #050505 100%);
   overflow: hidden;
