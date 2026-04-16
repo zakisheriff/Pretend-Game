@@ -18,10 +18,15 @@ html, body {
 #root {
   display: grid;
   place-items: center;
-  min-height: 100dvh; /* Use dynamic viewport height for mobile */
+  min-height: 100dvh;
   width: 100%;
   text-align: center;
-  background: radial-gradient(circle at center, #331133 0%, #050505 100%);
+  background: radial-gradient(circle at center, #0a0a0a 0%, #000000 100%);
+}
+
+.new-domain-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .redirect-container {
